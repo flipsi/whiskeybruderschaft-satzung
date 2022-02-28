@@ -1,4 +1,5 @@
-\documentclass[a4paper,12pt]{article}
+% \documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,12pt]{scrartcl}
 
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
@@ -6,7 +7,14 @@
 \usepackage{lmodern} % Latin Modern typeface (font)
 \usepackage[T1]{fontenc} % T1 font encoding for high quality font output
 
+\setkomafont{disposition}{\normalfont\bfseries}
 
+
+% hide section numbers (without breaking numbering like when using \section*, e.g. for references)
+\renewcommand*{\sectionformat}{}
+
+
+% change format of enumerations
 \usepackage{enumitem}
 \setenumerate[0]{label= (\arabic*)}
 
@@ -28,19 +36,24 @@
 
 \clearpage
 
-\begin{center}
+\topskip0pt
+\vspace*{\fill}
+
+\begin{abstract}
 \section*{Präambel}
 Im Bewusstsein seiner Verantwortung gegenüber der Trinkkultur des menschlichen Geschlechts haben
 sich die Mitglieder der Whiskeybruderschaft in der Absicht dem Lebenswasser seine verdiente Ehre zu
 erweisen und sich für die Kunst dessen Erzeugung sowie seines Genusses zu sensibilisieren die
 folgenden Grundsätze gegeben.
-\end{center}
+\end{abstract}
 
+\vspace*{\fill}
+%
 \clearpage
 
 
-
-\section*{Artikel 1}
+\section{Artikel 1}
+\label{sec:würde}
 \textbf{[Würde des Whiskeys und der Whiskeybrüder]}
 
 \begin{enumerate}
@@ -56,7 +69,8 @@ folgenden Grundsätze gegeben.
 
 
 
-\section*{Artikel 2}
+\section{Artikel 2}
+\label{sec:gegenstand}
 \textbf{[Gegenstand der Bruderschaft]}
 
 \begin{enumerate}
@@ -76,7 +90,8 @@ folgenden Grundsätze gegeben.
 
 
 
-\section*{Artikel 3}
+\section{Artikel 3}
+\label{sec:bruderschaftswhiskeys}
 \textbf{[Bruderschaftswhiskeys]}
 
 \begin{enumerate}
@@ -94,9 +109,9 @@ folgenden Grundsätze gegeben.
 \item Es muss stets mindestens einen Bruderschaftswhiskey geben.
 
 \item Ein Whiskey kann auf verschiedene Weisen zum Bruderschaftswhiskey erhoben werden: Durch
-  Beitritt eines neuen Mitglieds (siehe Artikel 4), durch Spende eines der Mitglieder, durch
-  bruderschaftlichen Kauf, durch Schenkung von außerhalb. Diese Liste ist nicht abschließend. Die
-  Erhebung eines Whiskeys zum Bruderschaftswhiskey ist irreversibel.
+  Beitritt eines neuen Mitglieds (siehe Artikel~\ref{sec:mitgliedschaft}), durch Spende eines der
+  Mitglieder, durch bruderschaftlichen Kauf, durch Schenkung von außerhalb. Diese Liste ist nicht
+  abschließend. Die Erhebung eines Whiskeys zum Bruderschaftswhiskey ist irreversibel.
 
 \item Ein Bruderschaftswhiskey sollte nur in Gemeinschaft mit der Bruderschaft oder mit Einwilligung
   bzw. Genehmigung seiner Mitglieder geöffnet und konsumiert werden. Bei äußeren Umständen, die das
@@ -110,7 +125,8 @@ folgenden Grundsätze gegeben.
 
 
 
-\section*{Artikel 4}
+\section{Artikel 4}
+\label{sec:mitgliedschaft}
 \textbf{[Mitgliedschaft]}
 
 \begin{enumerate}
@@ -120,9 +136,9 @@ folgenden Grundsätze gegeben.
 
 \item Die Erlangung der Mitgliedschaft erfordert die ausdrückliche Anerkennung der Satzung aus
   freiem Willen durch den Bewerber und die einstimmige Zustimmung aller bisherigen Whiskeybrüder.
-  Außerdem muss der Bewerber der Bruderschaft einen Bruderschaftswhiskey (siehe Artikel 3)
-  vermachen. Dieser Whiskey muss originalversiegelt sein. Whiskeybrüder können ihre Stimme von dem
-  Whiskey des Bewerbers abhängig machen.
+  Außerdem muss der Bewerber der Bruderschaft einen Bruderschaftswhiskey (siehe
+  Artikel~\ref{sec:bruderschaftswhiskeys}) vermachen. Dieser Whiskey muss originalversiegelt sein.
+  Whiskeybrüder können ihre Stimme von dem Whiskey des Bewerbers abhängig machen.
 
 \item Ein Whiskeybruder kann seine Mitgliedschaft in der Bruderschaft freiwillig beenden. Dem hat
   ein Gespräch mit dem Präsidenten vorauszugehen. Ein austretender Whiskeybruder hat keinen Anspruch
@@ -147,7 +163,8 @@ folgenden Grundsätze gegeben.
 
 
 
-\section*{Artikel 5}
+\section{Artikel 5}
+\label{sec:präsident}
 \textbf{[Präsident der Whiskeybruderschaft]}
 
 \begin{enumerate}
@@ -177,7 +194,8 @@ folgenden Grundsätze gegeben.
 
 
 
-\section*{Artikel 6}
+\section{Artikel 6}
+\label{sec:gültigkeit}
 \textbf{[Inkrafttreten und Gültigkeit der Satzung]}
 
 \begin{enumerate}
@@ -192,7 +210,8 @@ folgenden Grundsätze gegeben.
 
 
 
-\section*{Artikel 7}
+\section{Artikel 7}
+\label{sec:satzungsänderungen}
 \textbf{[Änderung der Satzung]}
 
 \begin{enumerate}
